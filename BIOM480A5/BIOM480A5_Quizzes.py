@@ -256,9 +256,49 @@ def multiple_choice_quiz(quizName):
                         'show the search path for modules':'sys.path',
                         'add a directory to the search path for modules':'sys.path.append(X)',
                         'show the user environment variables':'os.environ',
-                        'show the user home directory':'os.path.expanduser("~")'}
+                        'show the user home directory':'os.path.expanduser("~")',
+                        'show the user name':'os.getlogin()',
+                        'shortcut to the home directory':'~',
+                        'shortcut to the current directory':'.',
+                        'shortcut to the parent directory':'..'}
             action = "You got 8 right - touch your palm to your forehead."
             num2win = 8
+        case 'command_line_tools':
+            question = "Which command would you use to perform the following operation on the command line:\n XXX ?"
+            optionsDict = {'list the files in the current directory without details':'ls',
+                        'list the files in the current directory with details':'ls -l',
+                        'list the files in the current directory with details and hidden files':'ls -la',
+                        'change the current directory to X':'cd X',
+                        'change the current directory to the parent directory':'cd ..',
+                        'change the current directory to the home directory':'cd ~',
+                        'create a new directory called X':'mkdir X',
+                        'remove the empty directory X':'rmdir X',
+                        'remove the directory X and all its contents':'rm -r X',
+                        'copy the file X to the directory Y':'cp X Y',
+                        'move the file X to the directory Y':'mv X Y',
+                        'rename the file X to Y':'mv X Y',
+                        'remove the file X':'rm X',
+                        'remove the file X without confirmation':'rm -f X',
+                        'print the contents of the file X':'cat X',
+                        'print the first 10 lines of the file X':'head X',
+                        'print the last 10 lines of the file X':'tail X',
+                        'print the first 5 lines of the file X that contain the word Y':'grep Y X | head -5',
+                        'print the last 5 lines of the file X that contain the word Y':'grep Y X | tail -5',
+                        'print the number of lines in the file X':'wc -l X',
+                        'print the number of words in the file X':'wc -w X',
+                        'print the number of characters in the file X':'wc -c X',
+                        'print the number of lines, words, and characters in the file X':'wc X',
+                        'print a list of recent commands':'history',
+                        'repeat the last command':'!!',
+                        'repeat the last command that started with the letter X':'!X',
+                        'get detailed information about the command X':'man X',
+                        'find the location of the command X':'which X',
+                        'print the current working directory':'pwd',
+                        'print the current user name':'whoami',
+                        'print the current date and time':'date'}
+            action = "You got 10 right - touch your left ear."
+            num2win = 10
+
         case 'file_operations':
             question = "Which command would you use to perform the following operation on the file X:\n XXX ?"
             optionsDict = {'open the file X in read mode':'open(X, "r")',
@@ -318,7 +358,207 @@ def multiple_choice_quiz(quizName):
             action = "You got 10 right - turn to face to the left."
             num2win = 10
 
+        case 'for_and_while_loops':
+            question = "Which command would you use to perform the following operations:\n XXX ?"
+            optionsDict = {'print each element of the list X':'for i in X: print(i)',
+                        'print each element of the list X with its index':'for i,j in enumerate(X): print(j,i)',
+                        'print ten random integers between 1 and 100':'for i in range(10): print(random.randint(1,100))',
+                        'print random integers between 1 and 100 until the number 5 is generated':'while True: i = random.randint(1,100); print(i); if i==5: break',
+                        'exit the loop':'break',
+                        'skip the rest of the code in the loop and move to the next iteration':'continue',
+                        'skip to the next iteration if the iteration number is even':'if i%2==0: continue',
+                        'exit the loop if the iteration number is even':'if i%2==0: break',
+                        'continue without any effect if the number is even':'if i%2==0: pass',
+                        'just keep going as if there was no command':'pass',
+                        'print all values in the dictionary X':'for i in X.values(): print(i)',
+                        'print all keys in the dictionary X':'for i in X.keys(): print(i)',
+                        'print all key-value pairs in the dictionary X':'for i,j in X.items(): print(i,j)',
+                        'count how many times the letter "a" appears in the string X':'sum(1 for i in X if i=="a")',
+                        'count how many tries it takes to get a random number less than 5':'i = 0; while random.randint(1,100)>=5: i+=1; print(i)',
+                        'count how many random numbers it takes to get a total greater than 100':'i = 0; total = 0; while t<=100: t += random.randint(1,100); i+=1; print(i)'}
+            action = "You got 7 right - touch your right ear."
+            num2win = 7
+
+        case 'logic_statements':
+            question = "Which command would you use to perform the following operations:\n XXX ?"
+            optionsDict = {'check if the number X is greater than 5':'if X>5',
+                        'check if the number X is less than 5':'if X<5',
+                        'check if the number X is equal to 5':'if X==5',
+                        'check if the number X is not equal to 5':'if X!=5',
+                        'check if the number X is greater than or equal to 5':'if X>=5',
+                        'check if the number X is less than or equal to 5':'if X<=5',
+                        'check if the number X is between 5 and 10':'if 5<=X<=10',
+                        'check if the number X is not between 5 and 10':'if not 5<=X<=10',
+                        'check if the number X is between 5 and 10 or between 15 and 20':'if 5<=X<=10 or 15<=X<=20',
+                        'check if the number X is between 5 and 10 and between 15 and 20':'if 5<=X<=10 and 15<=X<=20',
+                        'check if the number X is not between 5 and 10 or between 15 and 20':'if not 5<=X<=10 or 15<=X<=20',
+                        'check if the number X is not between 5 and 10 and between 15 and 20':'if not 5<=X<=10 and 15<=X<=20',
+                        'check if the number X is positive':'if X>0',
+                        'check if the number X is negative':'if X<0',
+                        'check if the number X is even':'if X%2==0',
+                        'check if the number X is odd':'if X%2!=0',
+                        'check if the number X is a multiple of Y':'if X%Y==0',
+                        'check if the number X is a power of Y':'if X == Y ** round(math.log(X, Y))',
+                        'check if the number X is a prime number':'if all(X%i!=0 for i in range(2,X))',
+                        'check if the string X is equal to the string Y':'if X==Y',
+                        'check if two objects X and Y are the same object':'if X is Y',
+                        'check if two lists X and Y have all same elements':'if X==Y',
+                        'check if all elements of the list X are greater than 5':'if all(i>5 for i in X)',
+                        'check if any element of the list X is greater than 5':'if any(i>5 for i in X)',
+                        'check if all elements of the list X are strings':'if all(isinstance(i, str) for i in X)',
+                        'check of all elements of the list X are in the list Y':'if all(i in Y for i in X)',
+                        'check if the the string X is contained in the string Y':'if X in Y',
+                        'check if the the string X is not contained in the string Y':'if X not in Y',
+                        'print if a number is even, odd, or zero':'if X==0: print("zero"); elif X%2==0: print("even"); else: print("odd")',
+                        'print if a number is positive, negative, or zero':'if X==0: print("zero"); elif X>0: print("positive"); else: print("negative")',
+                        'print if a number is a multiple of 3, 5, both, or neither':'if X%3==0 and X%5==0: print("both"); elif X%3==0: print("3"); elif X%5==0: print("5"); else: print("neither")'}
+            action = "You got 10 right - wave."
+            num2win = 10
+
+        case 'numpy_arrays':
+            question = "Which command would you use to perform the following numpy operations:\n XXX ?"
+            optionsDict = {'create a vector X with the values 1, 2, and 3':'X = np.array([1,2,3])',
+                        'create a 3x3 matrix X with the values 1, 2, 3, 4, 5, 6, 7, 8, 9':'X = np.array([[1,2,3],[4,5,6],[7,8,9]])',
+                        'create a matrix X with 3 rows and 4 columns of zeros':'X = np.zeros((3,4))',
+                        'create a matrix X with 3 rows and 4 columns of ones':'X = np.ones((3,4))',
+                        'create a matrix X with 3 rows and 4 columns of random numbers':'X = np.random.rand(3,4)',
+                        'create a matrix X with 3 rows and 4 columns of random integers between 1 and 100':'X = np.random.randint(1,100,(3,4))',
+                        'create a matrix X with 3 rows and 4 columns of normally distributed random numbers':'X = np.random.randn(3,4)',
+                        'get the shape of the matrix X':'X.shape',
+                        'get the number of rows in the matrix X':'X.shape[0]',
+                        'get the number of columns in the matrix X':'X.shape[1]',
+                        'get the number of dimensions in the matrix X':'X.ndim',
+                        'get the number of elements in the matrix X':'X.size',
+                        'get the data type of the elements in the matrix X':'X.dtype',
+                        'get the sum of all elements in the matrix X':'X.sum()',
+                        'get the sum of the rows in the matrix X':'X.sum(axis=1)',
+                        'get the sum of the columns in the matrix X':'X.sum(axis=0)',
+                        'get the mean of all elements in the matrix X':'X.mean()',
+                        'get the mean of the rows in the matrix X':'X.mean(axis=1)',
+                        'get the first 5 columns of the matrix X':'X[:,:5]',
+                        'get the first 5 rows of the matrix X':'X[:5,:]',
+                        'get the first 5 elements of the matrix X':'X[:5]',
+                        'create a vector of 10 numbers from 1 to 10':'X = np.arange(1,11)',
+                        'create a vector of uniformly spaced numbers from 1 to 5 with 10 elements':'X = np.linspace(1,5,10)',
+                        'create a vector of 10 numbers from 1 to 10 in reverse order':'X = np.arange(10,0,-1)',
+                        'create an identity matrix with 5 rows and 5 columns':'X = np.eye(5)',
+                        'create a diagonal matrix with the values 1, 2, 3':'X = np.diag([1,2,3])',
+                        'create a vector of log-spaced numbers from 1 to 5 with 10 elements':'X = np.logspace(0,np.log10(5),10)'}
+            action = "You got 10 right - touch your left ear."
+            num2win = 10
+
+        case 'numpy_slicing':
+            question = "Which command would you use to perform the following numpy operations:\n XXX ?"
+            optionsDict = {'get the first element of the vector X':'X[0]',
+                        'get the last element of the vector X':'X[-1]',
+                        'get the first 3 elements of the vector X':'X[:3]',
+                        'get the last 3 elements of the vector X':'X[-3:]',
+                        'reshape the vector X into a 3x3 matrix':'X.reshape(3,3)',
+                        'transpose the matrix X':'X.T',
+                        'add a new row to the matrix X':'np.vstack((X,np.random.rand(1,X.shape[1])))',
+                        'add a new column to the matrix X':'np.hstack((X,np.random.rand(X.shape[0],1)))',
+                        'add a new dimension to the matrix X after the second existing dimension':'np.expand_dims(X,axis=2)',
+                        'add a new dimension to the matrix X before the first existing dimension':'np.expand_dims(X,axis=0)',
+                        'find the indices where the value in the matrix X is greater than 5':'np.where(X>5)',
+                        'adds a new dimension to X so that it is at least 2D':'np.atleast_2d(X)',
+                        'tile the matrix X 3 times along the first dimension':'np.tile(X,3,axis=0)',
+                        'convert the matrix X to a vector':'X.flatten()',
+                        'get the diagonal of the matrix X':'np.diag(X)',
+                        'convert the matrix X to a list':'X.tolist()',
+                        'convert the elements of the matrix X to integers':'X.astype(int)',
+                        'convert the elements of the matrix X to strings':'X.astype(str)',
+                        'convert the elements of the matrix X to floats':'X.astype(float)',
+                        'get the second to the fourth element of the vector X':'X[1:4]',
+                        'get the second to the last element of the vector X':'X[1:-1]',
+                        'get the first element and the last element of the vector X':'np.array([X[0], X[-1]])',
+                        'get the last element and the second to the last element of the vector X':'np.array([X[-1], X[-2]])',
+                        'get the first 3 elements and the last 3 elements of the vector X':'np.concatenate((X[:3], X[-3:]))',
+                        'get every third element starting with the first element of the vector X':'X[::3]',
+                        'get every third element starting with the second element of the vector X':'X[1::3]',
+                        'get a reversed vector with every third element starting with the last element of the vector X':'X[-1::-3]'}
+            action = "You got 8 right - touch your nose with your right hand."
+            num2win = 8
+
+        case 'linear_equations':
+            # The following questions will test students' knowledge of linear equations and how to solve them. Commands to consider are:
+            # - np.linalg: solve, lstsq, matrix_rank, inv, cross, dot, det, inner, outer, matmul, trace, norm, cond, inv, pinv, svd 
+            question = "Which command would you use to perform the following numpy operations:\n XXX ?"
+            optionsDict = {'solve the linear equation AX = B for X':'np.linalg.solve(A,B)',
+                        'find the least squares solution to the linear equation AX = B':'np.linalg.lstsq(A,B)',
+                        'find the rank of the matrix A':'np.linalg.matrix_rank(A)',
+                        'find the inverse of the matrix A':'np.linalg.inv(A)',
+                        'find the cross product of the vectors A and B':'np.cross(A,B)',
+                        'find the dot product of the vectors A and B':'np.dot(A,B)',
+                        'find the determinant of the matrix A':'np.linalg.det(A)',
+                        'find the inner product of the vectors A and B':'np.inner(A,B)',
+                        'find the outer product of the vectors A and B':'np.outer(A,B)',
+                        'find the matrix product of the matrices A and B':'np.matmul(A,B)',
+                        'find the augmented matrix of the linear equation AX = B':'np.hstack((A,B))',
+                        'find the rank of the augmented matrix of the linear equation AX = B':'np.linalg.matrix_rank(np.hstack((A,B)))',
+                        'find the trace of the matrix A':'np.trace(A)',
+                        'find the sum of the diagonal elements of the matrix A':'np.trace(A)',
+                        'find the norm of the vector A':'np.linalg.norm(A)',
+                        'find the condition number of the matrix A':'np.linalg.cond(A)',
+                        'find the Moore-Penrose pseudo-inverse of the matrix A':'np.linalg.pinv(A)',
+                        'find the singular value decomposition of the matrix A':'np.linalg.svd(A)'}
+            action = "You got 10 right - touch your right ear."
+            num2win = 10
+
+        
+        case 'class_objects':
+            question = "Consider the class 'Pacemaker' to answer the following questions:\n XXX ?"
+            optionsDict = {'Create a new pacemaker object with patient ID 123':'p = Pacemaker(123)',
+                        'Create a new pacemaker object with patient ID 123 and pacing rate 80':'p = Pacemaker(123, 80)',
+                        'Adjust the pacing rate of the pacemaker object p to 90':'p.adjust_rate(90)',
+                        'Monitor the heart rate of the pacemaker object p with a current heart rate of 70':'p.monitor_heart(70)',
+                        'What is the name of the constructor method in the Pacemaker class?':'__init__',
+                        'What kind of method is "__init__" in the Pacemaker class?':'constructor',
+                        'When called in a class, what does the "self" parameter refer to?':'the instance of the class',
+                        'How does one access the pacing rate of the pacemaker object p?':'p.pacing_rate',
+                        'How does one access the patient ID of the pacemaker object p?':'p.patient_id',
+                        'How does the method "adjust_rate" access the pacing rate of the pacemaker object?':'self.pacing_rate',
+                        'What is the default pacing rate of the pacemaker object p?':'70',
+                        'Is a default value set for the patient ID in the Pacemaker class?':'No',
+                        'What will happen if the patient ID is not provided when creating a new pacemaker object?':'An error will occur',
+                        'What will happen if3 the "pacing_rate" is not set when creating a new pacemaker object?':'It will default to 70',
+                        'What will happen if the pacing rate is set to 200 in the "adjust_rate" method?':'An error will occur'}
+            action = "You got 7 right - Yay!!"
+            num2win = 7
+            
         case _:
             print("Quiz not found")
             return
     multiple_choice(optionsDict, question, action, num2win)
+
+
+### Pacemaker Class in Python
+class Pacemaker:
+    """
+    A simple representation of a pacemaker used in biomedical engineering.
+    """
+
+    def __init__(self, patient_id, pacing_rate=70):
+        """
+        Initialize the pacemaker with a patient ID and a default pacing rate (bpm).
+        """
+        self.patient_id = patient_id
+        self.pacing_rate = pacing_rate  # Default 70 beats per minute
+
+    def adjust_rate(self, new_rate):
+        """
+        Adjust the pacing rate of the pacemaker.
+        """
+        if 40 <= new_rate <= 180:
+            self.pacing_rate = new_rate
+            print(f"Pacemaker rate set to {self.pacing_rate} bpm for Patient {self.patient_id}.")
+        else:
+            print("Error: Rate must be between 40 and 180 bpm.")
+
+    def monitor_heart(self, current_heart_rate):
+        """
+        Simulate heart monitoring. If the heart rate is too low, the pacemaker activates.
+        """
+        if current_heart_rate < self.pacing_rate:
+            print(f"Pacemaker activated for Patient {self.patient_id} to maintain {self.pacing_rate} bpm.")
+        else:
+            print(f"Heart rate normal ({current_heart_rate} bpm). No pacemaker intervention needed.")
