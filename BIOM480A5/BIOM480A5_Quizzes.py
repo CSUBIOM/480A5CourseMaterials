@@ -524,7 +524,112 @@ def multiple_choice_quiz(quizName):
                         'What will happen if the pacing rate is set to 200 in the "adjust_rate" method?':'An error will occur'}
             action = "You got 7 right - Yay!!"
             num2win = 7
-            
+
+        case 'common_matrices':
+            # This quiz looks at diff common matrices and their properties: zero, ones, symmetric, diagonal,
+            # triangular, identity, orthogonal, positive definite.  Commands to consider are: np.zeros, np.ones,
+            # np.eye, np.diag, np.triu, np.tril, np.identity, np.random.rand, np.random.randn, np.random.randint
+            question = "Which command would you use to perform the following numpy operations:\n XXX ?"
+            optionsDict = {'create a 3x3 matrix of zeros':'np.zeros((3,3))',
+                        'create a 3x3 matrix of ones':'np.ones((3,3))',
+                        'create a 3x3 identity matrix':'np.eye(3)',
+                        'create a 3x3 matrix with the diagonal elements 1, 2, 3':'np.diag([1,2,3])',
+                        'create a 3x3 upper triangular matrix from the matrix A':'np.triu(A)',
+                        'create a 3x3 lower triangular matrix from the matrix A':'np.tril(A)',
+                        'create a 3x3 symmetric matrix from the matrix A':'A + A.T',
+                        'create a 3x3 orthogonal matrix':'Q = np.random.rand(3,3); Q, _ = np.linalg.qr(Q)',
+                        'create a 3x3 positive definite matrix':'A = np.random.rand(3,3); A = np.dot(A,A.T)',
+                        'create a 3x3 random matrix with values between 0 and 1':'np.random.rand(3,3)',
+                        'check if a matrix is symmetric':'np.allclose(A, A.T)',
+                        'check if a matrix is diagonal':'np.allclose(A, np.diag(np.diag(A)))',
+                        'check if a matrix has full rank':'np.linalg.matrix_rank(A) == min(A.shape)',
+                        'check if a matrix is positive definite':'np.all(np.linalg.eigvals(A) > 0)',
+                        'check if a matrix is orthogonal':'np.allclose(np.dot(Q,Q.T), np.eye(3))'}
+            action = "You got 10 right!"
+            num2win = 10
+        
+        case 'matrix_norms':
+            # This quiz tests students' knowledge of matrix properties such as range, null space, determinant, norms, and inverse.
+            question = "Answer the fowllowing questions about matrix properties and numpy operations:\n XXX ?"
+            optionsDict = {'What command would you use to find the rank of the matrix A':'np.linalg.matrix_rank(A)',
+                        'What relationship tells us that v is in the null space of A':'A @ v == 0',
+                        'If A is a (mxn) matrix with rank r, what is the dimension of the null space of A':'n - r',
+                        'If A is a (mxn) matrix with rank r, what is the dimension of the range of A':'r',
+                        'What command would you use to find the determinant of the matrix A':'np.linalg.det(A)',
+                        'If the null space of A is non-trivial, what else can we say about the determinant of A':'The determinant of A is zero',
+                        'If the determinant of A is zero, what else can we say about the matrix A':'The matrix A is singular',
+                        'What command would you use to find the Frobenius norm of the matrix A':'np.linalg.norm(A)',
+                        'What command would you use to find the inverse of the matrix A':'np.linalg.inv(A)',
+                        'If the matrix A has inverse A^-1, what is the relationship between A and its inverse':'A @ A^1 = I',
+                        'If the matrix A is orthonormal, what is the relationship between A and its transpose':'A @ A.T = I',
+                        'If the matrix A is symmetric, what is the relationship between A and its transpose':'A = A.T',
+                        'If the matrix A is diagonal, what is the relationship between A and its transpose':'A = A.T',
+                        'If the matrix A is positive definite, what is the relationship between A and its transpose':'A = A.T',
+                        'If the square matrix A is singular, what can we say about its determinant':'The determinant of A is zero',
+                        'If the square matrix is invertible, what can we say about its determinant':'The determinant of A is non-zero',
+                        'If the (mxn) matrix A has full column rank, what is the relationship between m and n':'m >= n',
+                        'If the spectral norm of A is less than 1, what can we say about v and Av':'The vector v is shortened by the transformation A',
+                        'If the spectral norm of A is greater than 1, what can we say about v and Av':'The vector v is lengthened by the transformation A',
+                        'If the matrix A is orthonormal, what can be say about about v and Av':'The transformation A preserves the length of the vector v',
+                        'If v = [1,2,-3], what is the 2-norm of v':'|v| = sqrt(14)',
+                        'If v = [1,2,-3], what is the 1-norm of v':'|v| = 6',
+                        'If v = [1,2,-3], what is the infinity-norm of v':'|v| = 3',
+                        'Which norm is the absolute value of the largest element in the vector':'Infinity norm',
+                        'Which norm is the square root of the sum of the squares of the elements in the vector':'2-norm',
+                        'Which norm is the sum of the absolute values of the elements in the vector':'1-norm',
+                        'Which norm is also known as the Euclidean norm':'2-norm',
+                        'What is the definiton of an induced matrix norm':'max(|Ax|/|x|) for all x != 0',
+                        'How do you find the spectral norm of a matrix':'max(svd(A))',
+                        'Which induced norm is the same as the spectral norm':'2-norm',
+                        'What is the formular for the Moore-Penrose pseudo-inverse of a matrix A':'(A.T @ A)^-1 @ A.T',
+                        'When does the inverse of a square matrix A exist':'When the determinant of A is non-zero',
+                        'When does the inverse of a square matrix A not exist':'When the determinant of A is zero'}
+            action = "You got 10 right!"
+            num2win = 10
+        
+        case 'eigenvalues_and_eigenvectors':
+            # This quiz tests students' knowledge of eigenvalues and eigenvectors of matrices. Commands to consider are:
+            # - np.linalg: eig, eigvals, eigvalsh, eigvals, eigvalsh, eigvecs, eigvecsh
+            question = "Answer the following questions about eigenvalues and eigenvectors of matrices:\n XXX ?"
+            optionsDict = {'What command would you use to find the eigenvalues and eigenvectors of the matrix A':'np.linalg.eig(A)',
+                        'What is the relationship between the matrix A and its eigenvectors and eigenvalues':'A @ v = λv',
+                        'What do you know about the eigenvectors of a symmetric matrix':'The eigenvectors are orthogonal',
+                        'What do you know about the eigenvalues of a symmetric matrix':'The eigenvalues are real',
+                        'What do you know about the eigenvalues of a positive definite matrix':'The eigenvalues are positive',
+                        'If the square matrix A has a non-trivial null space, what can we say about its eigenvalues':'The matrix A has at least one eigenvalue of zero',
+                        'If the determinant of the square matrix A is zero, what can we say about its eigenvalues':'The matrix A has at least one eigenvalue of zero',
+                        'If the square matrix A is singular, what can we say about its eigenvalues':'The matrix A has at least one eigenvalue of zero',
+                        'If the square matrix A is invertible, what can we say about its eigenvalues':'The matrix A has no eigenvalues of zero',
+                        'What are the eigenvalues of the identity matrix':'The eigenvalues are all 1',
+                        'What are the eigenvectors of the identity matrix':'Any non-zero vector',
+                        'What are the eigenvalues of a diagonal matrix':'The diagonal elements',
+                        'What are the eigenvectors of a diagonal matrix':'The standard basis vectors',
+                        'What are the eigenvalues of an upper triangular matrix':'The diagonal elements',
+                        'What would be the overal transformation combining transformation matrices M1, M2, and M3 in that order':'M3 @ M2 @ M1',
+                        'If a transformation matrix A results in a pure rotation, what can we say about its eigenvalues':'All eigenvalues have unit magnitude',
+                        'What are the eigenvectors of an upper triangular matrix':'The standard basis vectors'}
+            action = "You got 10 right!"
+            num2win = 10
+        
+        case "linear_transformations_and_svd":
+            question = "Answer the following questions about linear transformations and singular value decomposition (SVD):\n XXX ?"
+            optionsDict = {'What command would you use to find the singular value decomposition of the matrix A':'np.linalg.svd(A)',
+                        'What is the relationship between the matrix A and its singular value decomposition':'A = U @ S @ V.T',
+                        'What do the singular values represent in the SVD of a matrix':'The scaling factors of the transformation',
+                        'What do the columns of the matrix U represent in the SVD of a matrix':'The left singular vectors',
+                        'What do the columns of the matrix V represent in the SVD of a matrix':'The right singular vectors',
+                        'What is the basis for the range of a matrix A in the SVD':'The columns of U corresponding to non-zero singular values',
+                        'What is the basis for the null space of a matrix A in the SVD':'The columns of V corresponding to zero singular values',
+                        'What is the relationship between the singular values and the eigenvalues of a matrix':'The singular values are the square roots of the eigenvalues of A.T @ A',
+                        'If a (nxn) matrix has a rank of r, how many non-zero singular values will it have':'r',
+                        'If a (nxn) matrix has a rank of r, how many zero singular values will it have':'n - r',
+                        'What is the relationship between the singular values and the eigenvalues of a symmetric matrix':'The singular values are the absolute values of the eigenvalues',
+                        'If A = U @ S @ V.T, what is A.T':'V @ S.T @ U.T',
+                        'If A = U @ S @ V.T, what is A^-1':'V @ S^-1 @ U.T',
+                        'If A = U @ S @ V.T, what is the Moore-Penrose pseudo-inverse of A':'V @ S^-1 @ U.T'}
+            action = "You got 10 right!"
+            num2win = 10
+
         case _:
             print("Quiz not found")
             return
