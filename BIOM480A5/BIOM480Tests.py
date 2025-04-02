@@ -122,6 +122,47 @@ def ttest(a, b):
 
 #*********************
 # Emma H will present on the topic of Spearman correlation test, creating function named 'spearmanr' 
+def spearmanr(x, y):
+
+    '''
+    Perform a Spearman rank-order correlation test.
+    Parameters:
+    x : array_like
+        First sample.
+    y : array_like
+        Second sample.
+    Returns:
+    correlation : float
+        The Spearman correlation.
+    p_value : float
+        The two-tailed p-value.
+
+    Example:
+    >>> x = [1, 2, 3, 4, 5]
+    >>> y = [2, 3, 4, 5, 6]
+    >>> correlation, p_value = spearmanr(x, y)
+    >>> print(correlation)
+    1.0
+    >>> print(p_value)
+    0.0
+    
+    Notes:
+    This function calculates the Spearman rank-order correlation coefficient and its p-value.
+    The p-value is calculated using the two-tailed test.
+    The function assumes that the input data is one-dimensional and of equal length.
+    '''
+
+    # Calculate the ranks of the data
+    ranks_x = stats.rankdata(x)
+    ranks_y = stats.rankdata(y)
+    # Calculate the Spearman correlation
+    correlation = np.corrcoef(ranks_x, ranks_y)[0, 1]
+    # Calculate the p-value
+    n = len(x)
+    t_stat = correlation * np.sqrt((n - 2) / (1 - correlation**2))
+    p_value = 2 * (1 - stats.t.cdf(np.abs(t_stat), df=n - 2))
+    return correlation, p_value
+
 
 #*********************
 # Elijah J will present on the topic of Bartlett’s test, creating function named 'bartlett' 
