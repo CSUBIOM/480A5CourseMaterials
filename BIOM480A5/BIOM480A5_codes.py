@@ -138,3 +138,43 @@ def pythonModules():
             'MetaPhlAn',
             'NextStrain',
             'TimeTree']
+
+def statistcalTests():
+    return [
+        "Pearson correlation test, crating function named 'pearsonr'",
+        "Spearman correlation test, creating function named 'spearmanr'",
+        "Kendall’s Tau correlation test, creating function named 'kendalltau'",
+        "Partial correlation test, creating function named 'partial_corr'",
+        "Distance correlation test, creating function named 'dcor'",
+        "Mantel test, creating function named 'mantel'",
+        "Point-Biserial correlation test, creating function named 'pointbiserialr'",
+        "Phi coefficient test, creating function named 'phicoeff'",
+        "Chi-square test of independence, creating function named 'chi2indep'",
+        "Chi-square goodness-of-fit test, creating function named 'chi2gof'",
+        "Fisher’s exact test, creating function named 'fisher_exact'",
+        "McNemar’s test, creating function named 'mcnemar'",
+        "Cochran’s Q test, creating function named 'cochran_q'",
+        "Barnard’s exact test, creating function named 'barnard_exact'",
+        "Boschloo’s test, creating function named 'boschloo'",
+        "Linear regression coefficient test, creating function named 'linreg'",
+        "F-test for overall regression, creating function named 'f_test'",
+        "Breusch-Pagan test, creating function named 'breusch_pagan'",
+        "White test, creating function named 'white_test'",
+        "Ramsey RESET test, creating function named 'reset_test'",
+        "Durbin-Watson test, creating function named 'durbin_watson'",
+        "Harvey-Collier test, creating function named 'harvey_collier'",
+        "Variance Inflation Factor (VIF) test, creating function named 'vif'",
+        "Shapiro-Wilk test, creating function named 'shapiro'",
+        "Anderson-Darling test, creating function named 'anderson'",
+        "Lilliefors test, creating function named 'lilliefors'",
+        "Jarque-Bera test, creating function named 'jarque_bera'",
+        "D’Agostino and Pearson’s test, creating function named 'dagostino'",
+        "Levene’s test, creating function named 'levene'",
+        "Bartlett’s test, creating function named 'bartlett'",
+        "Brown-Forsythe test, creating function named 'brown_forsythe'",
+        "Fligner-Killeen test, creating function named 'fligner_killeen'",
+        "Hotelling’s T-squared test, creating function named 'hotelling_t'",
+        "Permutation test, creating function named 'permutation_test'",
+        "Permutation test for correlation, creating function named 'permutation_corr'"
+    ]
+
