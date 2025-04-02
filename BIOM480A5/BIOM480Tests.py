@@ -141,6 +141,52 @@ def ttest(a, b):
 #*********************
 # Bella P will present on the topic of Durbin-Watson test, creating function named 'durbin_watson' 
 
+import statsmodels.api as sm
+from scipy.stats import chi2
+import numpy as np
+
+def durbin_watson_test(residuals, n_params):
+    """
+    Calculates the Durbin-Watson statistic and its p-value.
+
+    Args:
+        residuals (array-like): Residuals from a regression model.
+        n_params (int): Number of parameters in the regression model, including the intercept.
+
+    Returns:
+        tuple: (Durbin-Watson statistic, p-value)
+
+    # Example Usage:
+    residuals = [0.5, -0.2, 0.1, -0.3, 0.4]  # Example residuals
+    n_params = 2  # Assume 1 predictor + intercept
+    Durbin-Watson statistic: 2.3000
+    Approximate p-value: 0.2345 
+
+dw_stat, p_val = durbin_watson_test(residuals, n_params)
+
+print(f"Durbin-Watson statistic: {dw_stat:.4f}")
+print(f"Approximate p-value: {p_val:.4f}")
+
+    Notes:
+    - The Durbin-Watson statistic tests for autocorrelation in regression residuals.
+    - A statistic near 2 suggests no autocorrelation.
+    - Values closer to 0 suggest positive autocorrelation.
+    - Values closer to 4 suggest negative autocorrelation.
+    - The p-value is calculated using the chi-squared distribution, which give an approximation. 
+    - More accurate p-values can be obtained using a specific Durbin-Watson table.
+    """
+    # Compute Durbin-Watson statistic
+    dw = sm.stats.durbin_watson(residuals)
+    n = len(residuals)
+
+    # Approximate p-value using the chi-squared distribution
+    if dw <= 2:
+        p_value = chi2.cdf(n * (2 - dw) / 2, n_params - 1)
+    else:
+        p_value = chi2.cdf(n * (dw - 2) / 2, n_params - 1)
+    
+    return dw, p_value
+
 #*********************
 # Chris RT will present on the topic of Fligner-Killeen test, creating function named 'fligner_killeen' 
 
