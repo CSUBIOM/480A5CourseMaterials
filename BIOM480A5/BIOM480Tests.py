@@ -151,23 +151,24 @@ def ttest(a, b):
 # Dylan S will present on the topic of Barnard’s exact test, creating function named 'barnard_exact' 
 
 #Required imports
-from scipy.stats import fisher_exact
+from statsmodels.stats.contingency_tables import Table2x2
 
 def barnard_exact(table):
     '''
-    Placeholder for Barnard’s Exact Test – using Fisher’s test as a substitute.
-    This is only for illustrative purposes if 'barnard' method is unavailable.
+    Perform Barnard’s Exact Test on a 2x2 contingency table.
 
     Parameters:
     table : array_like
-        A 2x2 contingency table, such as [[a, b], [c, d]]
+        A 2x2 table, such as [[a, b], [c, d]]
 
     Returns:
     p_value : float
-        The p-value from Fisher's Exact Test (as stand-in)
+        The p-value from Barnard’s Exact Test
     '''
-    _, p_value = fisher_exact(table)
-    return p_value
+    tbl = Table2x2(table)
+    result = tbl.test_nominal_association(method="barnard")
+    return result.pvalue
+
 
 
 
