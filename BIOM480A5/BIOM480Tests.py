@@ -150,6 +150,37 @@ def ttest(a, b):
 #*********************
 # Dylan S will present on the topic of Barnard’s exact test, creating function named 'barnard_exact' 
 
+#Required imports
+from statsmodels.stats.contingency_tables import Table2x2
+
+def barnard_exact(table):
+    '''
+    Perform Barnard’s Exact Test on a 2x2 contingency table.
+    
+    Parameters:
+    table : array_like
+        A 2x2 contingency table, such as [[a, b], [c, d]] representing two independent groups
+        with binary outcomes.
+    
+    Returns:
+    p_value : float
+        The p-value from Barnard’s Exact Test.
+
+    Example:
+    >>> table = [[8, 2], [3, 7]]
+    >>> p_value = barnard_exact(table)
+    >>> print(p_value)
+    0.0412  # (example output; actual value may vary slightly)
+
+    Notes:
+    Barnard’s test is an alternative to Fisher’s exact test that does not condition on fixed margins,
+    making it more powerful in many small-sample situations. This test uses the 'statsmodels' implementation.
+    '''
+    tbl = Table2x2(table)
+    result = tbl.test_nominal_association(method="barnard")
+    return result.pvalue
+
+
 #*********************
 # Jacob S will present on the topic of Pearson correlation test, crating function named 'pearsonr' 
 
