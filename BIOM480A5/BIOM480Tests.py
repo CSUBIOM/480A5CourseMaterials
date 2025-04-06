@@ -159,13 +159,11 @@ def durbin_watson_test(residuals, n_params):
     # Example Usage:
     residuals = [0.5, -0.2, 0.1, -0.3, 0.4]  # Example residuals
     n_params = 2  # Assume 1 predictor + intercept
+    dw_stat, p_val = durbin_watson_test(residuals, n_params)
+    print(f"Durbin-Watson statistic: {dw_stat:.4f}")
+    print(f"Approximate p-value: {p_val:.4f}")
     Durbin-Watson statistic: 2.3000
     Approximate p-value: 0.2345 
-
-dw_stat, p_val = durbin_watson_test(residuals, n_params)
-
-print(f"Durbin-Watson statistic: {dw_stat:.4f}")
-print(f"Approximate p-value: {p_val:.4f}")
 
     Notes:
     - The Durbin-Watson statistic tests for autocorrelation in regression residuals.
