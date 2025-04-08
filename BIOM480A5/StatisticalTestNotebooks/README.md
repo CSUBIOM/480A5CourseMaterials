@@ -1,1 +1,0 @@
-Please use this folder to contain your notebooks.
