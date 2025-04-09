@@ -76,7 +76,57 @@ def ttest(a, b):
 # Becca B will present on the topic of Breusch-Pagan test, creating function named 'breusch_pagan' 
 
 #*********************
-# Ella B will present on the topic of Variance Inflation Factor (VIF) test, creating function named 'vif' 
+# Ella B will present on the topic of Variance Inflation Factor (VIF) test, creating function named 'vif'
+ 
+def vif(X, return_dataframe=True):
+    """
+    Calculate Variance Inflation Factor (VIF) for each variable in a dataset using scikit-learn.
+    
+    Parameters:
+    -----------
+    X : pandas.DataFrame
+        The input data containing predictor variables
+    return_dataframe : bool, default=True
+        If True, returns a pandas DataFrame with VIF values for each variable.
+        If False, returns a dictionary.
+    
+    Returns:
+    --------
+    pandas.DataFrame or dict
+        VIF values for each variable. Higher values (>5 or >10) indicate multicollinearity.
+    """
+    import pandas as pd
+    from sklearn.linear_model import LinearRegression
+    
+    # Converts to DataFrame if not already
+    if not isinstance(X, pd.DataFrame):
+        X = pd.DataFrame(X)
+    
+    # Calculate VIF for each variable
+    vif_data = {}
+    for col in X.columns:
+        # Features that will be used as predictors (all except the current one)
+        features = [x for x in X.columns if x != col]
+        
+        # Fit linear regression
+        X_features = X[features]
+        y = X[col]
+        reg = LinearRegression().fit(X_features, y)
+        
+        # Calculate R-squared
+        r2 = reg.score(X_features, y)
+        
+        # Calculate VIF
+        vif_data[col] = 1 / (1 - r2)
+    
+    if return_dataframe:
+        vif_df = pd.DataFrame({
+            "Variable": list(vif_data.keys()),
+            "VIF": list(vif_data.values())
+        })
+        return vif_df
+    
+    return vif_data
 
 #*********************
 # Lauren B will present on the topic of Jarque-Bera test, creating function named 'jarque_bera' 
