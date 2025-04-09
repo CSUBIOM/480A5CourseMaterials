@@ -158,6 +158,40 @@ def ttest(a, b):
 
 #*********************
 # Kayla T will present on the topic of Distance correlation test, creating function named 'dcor' 
+import numpy as np
+%pip install dcor
+import dcor
+import matplotlib.pyplot as plt
+from scipy.stats import norm
+def dcor(x, y, num_resamples=500):
+    """
+    Perform the distance correlation test between two variables x and y.
+
+    Parameters:
+        x (array-like): 1D or 2D data.
+        y (array-like): 1D or 2D data.
+        num_resamples (int): Number of permutations for the p-value estimation.
+
+    Returns:
+        p_value (float): Estimated p-value of the distance correlation test.
+    """
+    x = np.atleast_2d(x).T if x.ndim == 1 else x
+    y = np.atleast_2d(y).T if y.ndim == 1 else y
+
+    test_stat = dcor.distance_correlation(x, y)
+
+    count = 0
+    for _ in range(num_resamples):
+        y_perm = np.random.permutation(y)
+        stat_perm = dcor.distance_correlation(x, y_perm)
+        if stat_perm >= test_stat:
+            count += 1
+
+    p_value = (count + 1) / (num_resamples + 1)
+    return p_value
+# The Distance Correlation test is a statistical test that assesses the strength of the relationship between two random variables.
+# It is particularly useful for detecting non-linear relationships, unlike Pearson's correlation which only captures linear relationships.
+# The test is based on the concept of distance covariance, which measures the dependence between two random variables by comparing their pairwise distances.
 
 #*********************
 # Vivia VDM will present on the topic of White test, creating function named 'white_test' 
