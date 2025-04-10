@@ -714,7 +714,55 @@ def spearmanr(x, y):
     return correlation, p_value
 #*********************
 # Elijah J will present on the topic of Bartlett’s test, creating function named 'bartlett' 
-
+def bartlett(*samples):
+    '''
+    Perform Bartlett's test for homogeneity of variances across multiple samples.
+    
+    Parameters:
+    *samples : array_like
+        Two or more arrays of sample data. Each array must have at least 2 observations.
+        
+    Returns:
+    test_statistic : float
+        The Bartlett test statistic (T).
+    p_value : float
+        The p-value for the test.
+        
+    Example:
+    >>> sample1 = [1, 2, 3, 4, 5]
+    >>> sample2 = [2, 3, 4, 5, 6]
+    >>> sample3 = [3, 4, 5, 6, 7]
+    >>> T, p = bartlett_test(sample1, sample2, sample3)
+    >>> print(f"Test statistic: {T:.4f}, p-value: {p:.4f}")
+    
+    Notes:
+    - Bartlett's test assumes normality. Use Levene's test if normality is questionable.
+    - Requires at least two samples, each with ≥2 observations.
+    '''
+    samples = [np.asarray(sample) for sample in samples]
+    k = len(samples)
+    if k < 2:
+        raise ValueError("At least two samples are required.")
+    
+    ni = np.array([len(sample) for sample in samples])
+    if np.any(ni < 2):
+        raise ValueError("Each sample must have at least 2 observations.")
+    
+    n = np.sum(ni)
+    variances = np.array([np.var(sample, ddof=1) for sample in samples])
+    
+    # Pooled variance
+    pooled_var = np.sum((ni - 1) * variances) / (n - k)
+    
+    # Numerator and denominator for the test statistic
+    numerator = (n - k) * np.log(pooled_var) - np.sum((ni - 1) * np.log(variances))
+    denominator = 1 + (np.sum(1 / (ni - 1)) - 1 / (n - k)) / (3 * (k - 1))
+    
+    T = numerator / denominator
+    df = k - 1  # Correct degrees of freedom
+    p_value = 1 - stats.chi2.cdf(T, df)
+    
+    return T, p_value
 #*********************
 # Gabriela J will present on the topic of Chi-square test of independence, creating function named 'chi2indep' 
 
