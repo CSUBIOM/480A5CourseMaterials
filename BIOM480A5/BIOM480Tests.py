@@ -484,6 +484,84 @@ def mantel_test(matrix_a, matrix_b, permutations=999, random_state=None):
 #*********************
 # Andy G will present on the topic of Permutation test, creating function named 'permutation_test' 
 
+def permutation_test(a, b, n_permutations=10000, statistic=None):
+    '''
+    Perform a permutation test to determine if two samples come from the same distribution.
+    
+    Parameters:
+    a : array_like
+        First sample.
+    b : array_like
+        Second sample.
+    n_permutations : int, optional
+        Number of permutations to perform. Default is 10000.
+    statistic : function, optional
+        Function that returns the test statistic. Default is the difference in means.
+        
+    Returns:
+    p_value : float
+        The estimated p-value for the null hypothesis that the two samples come from the same distribution.
+    observed_stat : float
+        The observed test statistic.
+        
+    Example:
+    >>> a = [10, 11, 12, 13, 14]
+    >>> b = [7, 8, 9, 10, 11]
+    >>> p_value, observed_stat = permutation_test(a, b)
+    >>> print(f"P-value: {p_value}")
+    P-value: 0.0384
+    >>> print(f"Observed statistic: {observed_stat}")
+    Observed statistic: 3.0
+    
+    Notes:
+    The permutation test is a non-parametric statistical test that estimates the probability of obtaining
+    the observed test statistic (or a more extreme value) under the null hypothesis that the two samples
+    come from the same distribution. The test works by randomly permuting the combined data many times
+    and calculating the test statistic for each permutation.
+    
+    The test makes no assumptions about the underlying distributions of the data, making it useful
+    when the assumptions of parametric tests (like the t-test) are not met.
+    '''
+    import numpy as np
+    
+    # Convert inputs to numpy arrays
+    a = np.array(a)
+    b = np.array(b)
+    
+    # Default statistic is the difference in means
+    if statistic is None:
+        statistic = lambda x, y: np.mean(x) - np.mean(y)
+    
+    # Calculate the observed test statistic
+    observed_stat = statistic(a, b)
+    
+    # Combine the data
+    combined = np.concatenate((a, b))
+    n_a = len(a)
+    n_b = len(b)
+    n = n_a + n_b
+    
+    # Count the number of permutations where the statistic is as extreme as observed
+    count = 0
+    for _ in range(n_permutations):
+        # Randomly permute the combined data
+        np.random.shuffle(combined)
+        
+        # Split the permuted data into two groups of the original sizes
+        perm_a = combined[:n_a]
+        perm_b = combined[n_a:]
+        
+        # Calculate the permuted test statistic
+        perm_stat = statistic(perm_a, perm_b)
+        
+        # Count if the permuted statistic is as extreme as the observed
+        if np.abs(perm_stat) >= np.abs(observed_stat):
+            count += 1
+    
+    # Calculate the p-value
+    p_value = count / n_permutations
+    
+    return p_value, observed_stat
 #*********************
 # Emma G will present on the topic of Anderson-Darling test, creating function named 'anderson' 
 
