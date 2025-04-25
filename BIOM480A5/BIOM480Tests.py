@@ -158,7 +158,7 @@ def ttest(a, b):
 
 #*********************
 # Kayla T will present on the topic of Distance correlation test, creating function named 'dcor' 
-import numpy as np
+import numpy as np 
 %pip install dcor
 import dcor
 import matplotlib.pyplot as plt
