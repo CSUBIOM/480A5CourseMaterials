@@ -7,6 +7,9 @@
 <p><a href = "mailto: munsky@colostate.edu"> munsky@colostate.edu </a> • <a href="https://colostate.instructure.com/courses/201690">Course Canvas Page</a> •  <a href="https://www.engr.colostate.edu/~munsky/">Munsky Group</a> </p>
 </div>
 </p>
+
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/MrPRz1_4euA/0.jpg)](https://www.youtube.com/watch?v=MrPRz1_4euA)
+                       
 </html>
 ## Licensing
 
