@@ -701,6 +701,35 @@ def boschloo(table, alternative='two-sided'):
 #*********************
 # Paycen H will present on the topic of Phi coefficient test, creating function named 'phicoeff' 
 
+import numpy as np
+from scipy.stats import chi2_contingency
+
+def phicoeff(table):
+    """
+    Calculate the Phi coefficient from a 2x2 contingency table.
+
+    Parameters:
+        table (list of lists or 2x2 np.ndarray): [[a, b], [c, d]]
+    
+    Returns:
+        phi (float): Phi coefficient
+        p_value (float): Chi-squared test p-value
+    """
+    table = np.array(table)
+    if table.shape != (2, 2):
+        raise ValueError("Input must be a 2x2 contingency table.")
+    
+    a, b = table[0]
+    c, d = table[1]
+
+    numerator = a * d - b * c
+    denominator = np.sqrt((a + b) * (c + d) * (a + c) * (b + d))
+
+    phi = numerator / denominator if denominator != 0 else 0.0
+    _, p, _, _ = chi2_contingency(table, correction=False)
+
+    return phi, p 
+
 #*********************
 # Kyle H will present on the topic of Fisher’s exact test, creating function named 'fisher_exact' 
 
