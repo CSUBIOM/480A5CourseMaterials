@@ -165,12 +165,11 @@ If all went well, you should now have all of the course codes and data on your c
 
 **If you are taking this course for credit at CSU, please see instructions on CANVAS for how to proceed and get access to your homework assignments, discussion boards, and group challenges. SKIP THE REST OF THIS SECTION - THESE ASSIGNMENTS ARE ONLY FOR NON-CSU PARTICPANTS AND WILL NOT BE GRADED FOR CSU CREDIT.**
 
-Once you have a GitHub account, you can sign up for the first Homework Assignment - Introduction to GitHub and Python. To get access, you must sign u
+Once you have a GitHub account, you can sign up for the first Homework Assignment - Introduction to GitHub and Python. To get access, you must sign up for the UQ-Bio At Home Course at [https://forms.gle/6VSxaoSCyqmPvg9q8](https://forms.gle/6VSxaoSCyqmPvg9q8).  
 
-You can sign up [here](https://classroom.github.com/a/DZQniLPi) to get access to your first UQ-Bio Homework Assignment. This will take you to a signup sheet for the class. Click "skip to the next step" (also make sure you signed up for the class at. Refresh a few times until your repository is created and then follow the links.
+Upon completing the application, you will be given a link to the first homework assignment. That link will take you to a signup sheet for the class. Click "skip to the next step". Refresh a few times until your repository is created and then follow the links.
 
-**Step 4** Once the repository is ready, a link will appear: "https://github.com/MunskyGroup/uqbio2024_github-[YOURNAME])," where [YOURNAME] is replaced with your GitHub userID.  Follow this link to your own personal repository to see your first assignment.
-
+Once the repository is ready, a personalized link will appear.  Follow this link to your own personal repository to see your first assignment.
 
 ### Helpful GitHub Tutorials:
 Tutorial on getting started in GitHub Desktop: [GitHub Desktop Tutorial](https://docs.github.com/en/desktop/overview/getting-started-with-github-desktop)
