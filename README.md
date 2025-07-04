@@ -58,25 +58,28 @@ ___
 ___
 
 
-<left><h3> Module 3 : Optical Microscopy Experiments and Image Processing. </h3></left>
-| Date (MST)  | Description |Instructor | Notebook(s)  | Homework |
-| -------- | -------- | -------- | -------- | -------- |
-| June 4  | Image Loading and Processing | Dr. Luis Aguilera | [M2A - Basics ➡️](./Module2-ImageProcessing/M2A_Basic_Image_Processing.ipynb)   | [HW4 ➡️](https://classroom.github.com/a/hToo3Prt) |   | 
-| June 5 | Image Segmentation and Particle Tracking  | Dr. Luis Aguilera | [M2B-Segmentation ➡️](./Module2-ImageProcessing/M2B_Segmenting_Images.ipynb) [M2C-Particle Tracking ➡️](./ImageProcessing/M2C_Tracking_Particles.ipynb) [Afternoon Practice](./Module2-ImageProcessing/M2D_Processing_Handwrtten_Digits.ipynb) | [HW4 ➡️](https://classroom.github.com/a/hToo3Prt) |
+<left><h3> Module 4 : Optical Microscopy Experiments and Image Processing. </h3></left>
+| Description | Notebook(s)  |
+| -------- | -------- |
+| Basic Steps in Image Loading and Processing | [Module 4A ➡️](./Module4-ImageProcessing/M4A_Basic_Image_Processing.ipynb)   |
+| Using Machine Learning to Process Handwritten Digits | [Module 4B ➡️](./Module4-ImageProcessing/M4B_Processing_Handwrtten_Digits.ipynb) |
+| Segmenting Images to Extract and Quantify Cellular Features  | [Module 4C ➡️](./Module4-ImageProcessing/M4C_Segmenting_Images.ipynb) |
+| Tracking Biological Particles to Explore Sub-Cellular Motion | [Module 4D ➡️](./ImageProcessing/M4D_Tracking_Particles.ipynb) 
 ___
 
-<left><h3> Module 4 :  Computational Modeling and Stochastic Simulation of Biological Processes. </h3></left>
-| Date (MST) | Description | Instructor | Notebook(s)  | Homework |
-| --------| -------- | -------- | -------- | -------- |
-| June 11 | Stoichiometries, Propensity functions, and ODE Models | Connor King | [M4A-Stoichiometries and Propentsities➡️](./Module4-ModelingBiochemicalReactions/M4A_Stoichiometries_Propensities_and_ODE_Models.ipynb)| [HW6 ➡️](https://classroom.github.com/a/tLyhxyma)
-| June 12 | Stochastic Simulation | Jack Forman and Alex David  | [M4B-Stochasitic Simulation ➡️](./Module4-ModelingBiochemicalReactions/M4B_Stochastic_Simulation_Algorithm.ipynb) | [HW6 ➡️](https://classroom.github.com/a/tLyhxyma)
-| June 13 | Chemical Master Equation and the Finite State Projection| Dr. Alex Popinga | [M4C-Chemical Master Equations ➡️](./Module4-ModelingBiochemicalReactions/M4C_Chemical_Master_Equation.ipynb)| [HW6 ➡️](https://classroom.github.com/a/tLyhxyma)
+<left><h3> Module 5 :  Computational Modeling and Stochastic Simulation of Biological Processes. </h3></left>
+| Description | Notebook(s)  |
+| --------| -------- |
+| Stoichiometries, Propensity Functions, and ODE Models | [Module 5A ➡️](./Module5-ModelingBiochemicalReactions/M5A_Stoichiometries_Propensities_and_ODE_Models.ipynb)|
+| Generating Stochastic Simulations of Cellular Trajectories| [Module 5B ➡️](./Module5-ModelingBiochemicalReactions/M5B_Stochastic_Simulation_Algorithm.ipynb) |
+| Chemical Master Equation and the Finite State Projection| [Module 5C ➡️](./Module5-ModelingBiochemicalReactions/M5C_Chemical_Master_Equation.ipynb)|
 ___
 
-<left><h3> Module 5 :  Markov Chain Monte Carlo (MCMC) Methods and Model Inference. </h3></left>
-| Date (MST) | Description | Instructor | Notebook(s)  | Homework |
-| --------| -------- | -------- | -------- | -------- |
-| June 14 | Python Tutorial for MCMC | Dr. Kaan Ocal |   <ul>[M5A-Bayesian Thinking ➡️](./Module5-BayesianThinkingAndMCMC/M5A_Bayesian_Thinking.ipynb)</ul> <ul>[M5B-MCMC ➡️](./Module5-BayesianThinkingAndMCMC/M5B_Markov_Chain_Monte_Carlo.ipynb)</ul>    |  [HW6 ➡️](https://classroom.github.com/a/tLyhxyma)
+<left><h3> Module 6 :  Bayesian Model Inference and Markov Chain Monte Carlo (MCMC) Methods. </h3></left>
+| Description | Notebook(s)  |
+| --------| -------- |
+| Formulating Bayes's Theorem to Analyze Data in Python | [Module 6A ➡️](./Module6-MCMC/M6A_Bayesian_Thinking.ipynb)|  
+| Using Markov Chain Monte Carlo to Solve Complex Problems | [Module 6A ➡️](./Module6-MCMC/M6B_Markov_Chain_Monte_Carlo.ipynb)|  
 ___
 
 ## Python Setup 
