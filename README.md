@@ -95,14 +95,14 @@ Download and install either anaconda or miniconda from:  https://www.anaconda.co
 Once you have conda installed, we need to create a new environment for the class. 
 
 * Restart your computer so conda is available.
-* Open up a new Terminal (Linux/Mac) or Anaconda Prompt / Command Prompt (Windows) and type the following commands
+* Open up a new Terminal (Linux/Mac) or Anaconda Prompt / Command Prompt (Windows) and type the following commands (Note - in the screen shots provided below, we used the environment name "uqbio2024_py310," but this can be changed to suit your personal preferences.)
    1. ```conda activate```  - after activating you will see (base) in front of your prompt, this is the current conda environment you are in. 
 
-   2. ```conda create --name "uqbio2024_py310" python=3.10``` 
+   2. ```conda create --name "biom480a5" python=3.10``` 
    ![](./uqbio2024_files/step1.png)
 
-   3. ```conda activate uqbio2024_py310```
-   ![](./uqbio2024_files/step3.png) you should see your current environment switch to (uqbio2024_py310)
+   3. ```conda activate biom48a5```
+   ![](./uqbio2024_files/step3.png) you should see your current environment switch to (biom48a5)
 
    4. ```conda install numpy pandas scipy jupyter ipython matplotlib pillow scikit-image seaborn tifffile beautifulsoup4 scikit-learn conda-forge::trackpy```
    ![](./uqbio2024_files/step4.png)
@@ -116,11 +116,9 @@ Once you have conda installed, we need to create a new environment for the class
       * For CPU if you do not have an nvidia graphics card, just run the following: ```pip install git+https://www.github.com/mouseland/cellpose.git```
    7. Finally check your environment is working correctly by running the ```check_environment.py``` file in this repository. Navigate to the directory where your local repository is and run: ```python check_environment.py```. If there are no error messages then you are good to go!
 
-
-
 ### Using your new environment in VS Code
 
-Now that we have a brand new environment, we can use an IDE (integrated developing environment) to use this Python environment for Python coding. For this course we recommend VS Code: https://code.visualstudio.com/
+Now that we have a brand new environment, we can use an IDE (integrated developing environment) to use this Python environment for Python coding. For this course we recommend VS Code: [Visual Studio](https://code.visualstudio.com/)
 
 1. Open VS Code
 ![](./uqbio2024_files/vscode1.png)
@@ -129,31 +127,31 @@ Now that we have a brand new environment, we can use an IDE (integrated developi
 2. Enter the search bar and type ">" or use "Ctrl + Shift + P" for activating the command palette
 ![](./uqbio2024_files/vscode1a.png)
 
-3. type Python: Select interpreter and select the uqbio2024_py310 kernel
+3. type Python: Select interpreter and select the biom48a5 kernel
 ![](./uqbio2024_files/vscode2.png)
 
 5. At the top, click Terminal and then New terminal or use "Ctrl + Shift + `"
 ![](./uqbio2024_files/vscode3.png)
 
-6. Check that the terminal that popped up is using our correct environment by making sure it says ```(uqbio2024_py310)``` in front of your path name in the terminal or command prompt.
+6. Check that the terminal that popped up is using our correct environment by making sure it says ```(biom48a5)``` in front of your path name in the terminal or command prompt.
 ![](./uqbio2024_files/vscode4.png)
 
 Feel free to check out the preliminary python notebooks under CourseMaterials/Module1-PreliminaryPython/. To run a notebook file in VS Code, simply open the .ipynb file in VS code by navigating to it in your workspace or using File > Open File.
 
 ### Learning Python resources
 
-Python 3.10 documentation's tutorial: https://docs.python.org/3.10/tutorial/index.html
+[Python 3.10 documentation's tutorial](https://docs.python.org/3.10/tutorial/index.html)
 
 
 ## Getting Started with GitHub
 
-We are going to use and share a lot of codes during the summer school, and it can be difficult to keep track of who is working on what.  To help us with this common concern, we are going to use GitHub for version control. 
+We are going to use and share a lot of codes during the course, and it can be difficult to keep track of who is working on what.  To help us with this common concern, we are going to use GitHub for version control. 
 
-This is also how course homework can be submitted and graded throughout the program, so if you want fast feedback, it is very important for you to learn how to use GitHub!
+This is also how course homework can be submitted and graded throughout the course, so if you want fast feedback, it is very important for you to learn how to use GitHub!
 
 Please follow these steps to get started using GitHub (and to complete your first homework assignment):
 
-**Step 1** Visit [https://github.com/](https://github.com/) and sign up for a free account. Keep track of your user name and password, and you may need to set up two-factor identification. Follow instructions to do so.
+**Step 1** Visit [https://github.com/](https://github.com/](https://github.com/](https://github.com/) and sign up for a free account. Keep track of your user name and password, and you may need to set up two-factor identification. Follow instructions to do so.
 
 **Step 2** Once you have a GitHub account, go to Homework 1 (GitHub Introduction) at [https://classroom.github.com/a/OhptcG8t](https://classroom.github.com/a/OhptcG8t) to get access to your first UQ-Bio Summer School Homework Assignment. This will take you to a signup sheet for the class. 
 
@@ -169,7 +167,6 @@ Please follow these steps to get started using GitHub (and to complete your firs
 Click the button "Clone" at the bottom.
 
 If all went well, you should now be able to follow along with our class exercises and be able to complete the first part of the first homework assignment.
-
 
 
 ### Helpful GitHub Tutorials:
