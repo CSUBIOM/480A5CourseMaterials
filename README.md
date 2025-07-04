@@ -38,10 +38,12 @@ Below is a summary of the materials for this course.  Please pull to refresh thi
 ___
 
 <left><h3> Module 2 :  Introduction to Basic Bioinformatics.  </h3></left>
-| Date (MST)  | Description |Instructor | Notebook(s)  | Homework |
-| -------- | -------- | -------- | -------- | -------- |
-| June 6 | Statistics | Dr. Keisha Cook | <ul>[M3A-Distributions ➡️](./Module3-Statistics/M3A_Distributions_Sampling_Expectations_and_SummaryStatistics.ipynb)  </ul><ul>[M3B-Likelihoods ➡️](./Module3-Statistics/M3B_LikelihoodFunctions_Estimation.ipynb) </ul><ul>[M3C-Significance ➡️](./Module3-Statistics/M3C_HypothesisTesting_Significance_Pvalues.ipynb) </ul> | [HW5 ➡️](https://classroom.github.com/a/4UURF--W)
-| June 7 | Introduction to Machine Learning for Biological Data | Dr. William Raymond  |  <ul>[M3D-Regression ➡️](./Module3-Statistics/M3D_Intro_to_ML_and_Basics_of_Regression.ipynb)</ul> <ul>[M3E-Basic Classification ➡️](./Module3-Statistics/M3E_Basics_of_Classification.ipynb)</ul>    | [HW5 ➡️](https://classroom.github.com/a/4UURF--W)
+ | Description | Notebook(s)  |
+ | -------- | -------- |
+ | Getting and annotatic biological sequences | [Module 2A ➡️](./Module2-Bioinformatics/M2A_Getting_and_Annotating_Genomic_Sequences.ipynb) |
+ | Aligning sequences | [Module 2B ➡️](./Module2-Bioinformatics/M2B_Aligning_Sequences.ipynb |
+ | Searching for related sequences | [Module 2C ➡️]([./Module2-Bioinformatics/M2C_Finding_Related_Sequences.ipynb) |
+ | Cojstructing Phylogenetic Histories | [Module 2D ➡️](./Module2-Bioinformatics/M2D_Constructing_Phylogenetic_Histories.ipynb |
 
 ___
 
