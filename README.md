@@ -1,6 +1,6 @@
 <html>
          <div style="font-size: 20px; width: 1000px;">
-              <h1> <left> Welcome to BIOM/CBE 480A5! </left> </h1>
+              <h1> <left> Welcome to Computational Statistics in Bioengineering! </left> </h1>
               <p><left==========================================left> </p>
               <p> Below is the Github repository holding all the links to Jupyter Notebooks and files needed during the course. </p>
            <h3> Authors: </h3> <pre> Brian Munsky, Luis Aguilera, William Raymond, Dmitri Svetlov, Jack Forman, Joshua Cook, Michael May, Zachary Fox, Alex Popinga, and Eric Ron. </pre>
@@ -98,11 +98,11 @@ Once you have conda installed, we need to create a new environment for the class
 * Open up a new Terminal (Linux/Mac) or Anaconda Prompt / Command Prompt (Windows) and type the following commands (Note - in the screen shots provided below, we used the environment name "uqbio2024_py310," but this can be changed to suit your personal preferences.)
    1. ```conda activate```  - after activating you will see (base) in front of your prompt, this is the current conda environment you are in. 
 
-   2. ```conda create --name "biom480a5" python=3.10``` 
+   2. ```conda create --name "compstatbioeng" python=3.10``` 
    ![](./uqbio2024_files/step1.png)
 
-   3. ```conda activate biom48a5```
-   ![](./uqbio2024_files/step3.png) you should see your current environment switch to (biom48a5)
+   3. ```conda activate compstatbioeng```
+   ![](./uqbio2024_files/step3.png) you should see your current environment switch to (compstatbioeng)
 
    4. ```conda install numpy pandas scipy jupyter ipython matplotlib pillow scikit-image seaborn tifffile beautifulsoup4 scikit-learn conda-forge::trackpy```
    ![](./uqbio2024_files/step4.png)
@@ -127,13 +127,13 @@ Now that we have a brand new environment, we can use an IDE (integrated developi
 2. Enter the search bar and type ">" or use "Ctrl + Shift + P" for activating the command palette
 ![](./uqbio2024_files/vscode1a.png)
 
-3. type Python: Select interpreter and select the biom48a5 kernel
+3. type Python: Select interpreter and select the compstatbioeng kernel
 ![](./uqbio2024_files/vscode2.png)
 
 5. At the top, click Terminal and then New terminal or use "Ctrl + Shift + `"
 ![](./uqbio2024_files/vscode3.png)
 
-6. Check that the terminal that popped up is using our correct environment by making sure it says ```(biom48a5)``` in front of your path name in the terminal or command prompt.
+6. Check that the terminal that popped up is using our correct environment by making sure it says ```(compstatbioeng)``` in front of your path name in the terminal or command prompt.
 ![](./uqbio2024_files/vscode4.png)
 
 Feel free to check out the preliminary python notebooks under CourseMaterials/Module1-PreliminaryPython/. To run a notebook file in VS Code, simply open the .ipynb file in VS code by navigating to it in your workspace or using File > Open File.
@@ -156,7 +156,7 @@ Please follow these steps to get started using GitHub (and to complete your firs
 
 **Step 3** Once you have installed GitHub Desktop, launch it, and it will ask you to sign in as a GitHub user (use your account from Step 1).
 
-**Step 4** You will reach a page titled "Let's get started". Click the button "clone a repository" on the second from the top on the left. Type your repository name ("CSUBIOM/480A5CourseMaterials")
+**Step 4** You will reach a page titled "Let's get started". Click the button "clone a repository" on the second from the top on the left. Type your repository name ("CSUBIOM/CompStatBioeng")
 Click the button "Clone" at the bottom.
 
 If all went well, you should now have all of the course codes and data on your computer, and you should be able to follow along with our class exercises and be able to complete the first part of the first homework assignment.
