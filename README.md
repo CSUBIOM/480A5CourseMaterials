@@ -142,31 +142,34 @@ Feel free to check out the preliminary python notebooks under CourseMaterials/Mo
 
 [Python 3.10 documentation's tutorial](https://docs.python.org/3.10/tutorial/index.html)
 
-
 ## Getting Started with GitHub
 
 We are going to use and share a lot of codes during the course, and it can be difficult to keep track of who is working on what.  To help us with this common concern, we are going to use GitHub for version control. 
 
-This is also how course homework can be submitted and graded throughout the course, so if you want fast feedback, it is very important for you to learn how to use GitHub!
+This is also how course homework will be assigned, submitted, and graded throughout the course. So, if you want fast feedback, it is very important for you to learn how to use GitHub!
 
 Please follow these steps to get started using GitHub (and to complete your first homework assignment):
 
-**Step 1** Visit [https://github.com/](https://github.com/](https://github.com/](https://github.com/) and sign up for a free account. Keep track of your user name and password, and you may need to set up two-factor identification. Follow instructions to do so.
+**Step 1** Visit [https://github.com/](https://github.com/) and sign up for a free account. Keep track of your user name and password, and you may need to set up two-factor identification. Follow instructions to do so.
 
-**Step 2** Once you have a GitHub account, go to Homework 1 (GitHub Introduction) at [https://classroom.github.com/a/OhptcG8t](https://classroom.github.com/a/OhptcG8t) to get access to your first UQ-Bio Summer School Homework Assignment. This will take you to a signup sheet for the class. 
+**Step 2** If you are not an expert on GitHub already, I recommend installing and using the GitHub Desktop Client for performing necessary GitHub tasks. Download this at: [https://desktop.github.com](https://desktop.github.com).
 
-**Step 3** Look for your name in the list and click to claim your spot. If you are not yet listed, click "skip to the next step" (also make sure you signed up for the class at: [https://forms.gle/ux67KhtV7Q3pDgrZ8](https://forms.gle/ux67KhtV7Q3pDgrZ8). Refresh a few times until your repository is created and then follow the links.
+**Step 3** Once you have installed GitHub Desktop, launch it, and it will ask you to sign in as a GitHub user (use your account from Step 1).
 
-**Step 4** Once the repository is ready, a link will appear: "https://github.com/MunskyGroup/uqbio2024_github-[YOURNAME])," where [YOURNAME] is replaced with your GitHub userID.  Follow this link to your own personal repository to see your first assignment.
-
-**Step 5** If you are not an expert on GitHub already, I recommend using the GitHub Desktop Client for performing necessary GitHub tasks. Download this at: [https://desktop.github.com](https://desktop.github.com).
-
-**Step 6** Once you have installed GitHub Desktop, launch it, and it will ask you to sign in as a GitHub user (use your account from Step 1).
-
-**Step 7** You will reach a page titled "Let's get started". Click the button "clone a repository" on the second from the top on the left. Type your repository name ("MunskyGroup/uqbio2024_github-[YOURNAME]")
+**Step 4** You will reach a page titled "Let's get started". Click the button "clone a repository" on the second from the top on the left. Type your repository name ("CSUBIOM/480A5CourseMaterials")
 Click the button "Clone" at the bottom.
 
-If all went well, you should now be able to follow along with our class exercises and be able to complete the first part of the first homework assignment.
+If all went well, you should now have all of the course codes and data on your computer, and you should be able to follow along with our class exercises and be able to complete the first part of the first homework assignment.
+
+## Homework Assignments
+
+**If you are taking this course for credit at CSU, please see instructions on CANVAS for how to proceed and get access to your homework assignments, discussion boards, and group challenges. SKIP THE REST OF THIS SECTION - THESE ASSIGNMENTS ARE ONLY FOR NON-CSU PARTICPANTS AND WILL NOT BE GRADED FOR CSU CREDIT.**
+
+Once you have a GitHub account, you can sign up for the first Homework Assignment - Introduction to GitHub and Python. To get access, you must sign u
+
+You can sign up [here](https://classroom.github.com/a/DZQniLPi) to get access to your first UQ-Bio Homework Assignment. This will take you to a signup sheet for the class. Click "skip to the next step" (also make sure you signed up for the class at. Refresh a few times until your repository is created and then follow the links.
+
+**Step 4** Once the repository is ready, a link will appear: "https://github.com/MunskyGroup/uqbio2024_github-[YOURNAME])," where [YOURNAME] is replaced with your GitHub userID.  Follow this link to your own personal repository to see your first assignment.
 
 
 ### Helpful GitHub Tutorials:
@@ -182,7 +185,7 @@ Suggestions for editors to use for modifying your README file:
 
 Cheatsheet with GitHub Commands: [github-git-cheatsheet.pdf](https://education.github.com/git-cheat-sheet-education.pdf)
 
-Click the image for a video of Q-Bio poetry from Brian:
+**Thank you for reading this far!** As a reward, please click the image below for a special video of Q-Bio poetry from Brian:
 
 [![Poetry Video from Brian](https://img.youtube.com/vi/MrPRz1_4euA/0.jpg)](https://www.youtube.com/watch?v=MrPRz1_4euA)
 
