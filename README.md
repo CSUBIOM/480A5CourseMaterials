@@ -48,10 +48,13 @@ ___
 ___
 
 <left><h3> Module 3 :  Multivariable Statistics and Machine Learning for Biological Data.  </h3></left>
-| Date (MST)  | Description |Instructor | Notebook(s)  | Homework |
-| -------- | -------- | -------- | -------- | -------- |
-| June 6 | Statistics | Dr. Keisha Cook | <ul>[M3A-Distributions ➡️](./Module3-Statistics/M3A_Distributions_Sampling_Expectations_and_SummaryStatistics.ipynb)  </ul><ul>[M3B-Likelihoods ➡️](./Module3-Statistics/M3B_LikelihoodFunctions_Estimation.ipynb) </ul><ul>[M3C-Significance ➡️](./Module3-Statistics/M3C_HypothesisTesting_Significance_Pvalues.ipynb) </ul> | [HW5 ➡️](https://classroom.github.com/a/4UURF--W)
-| June 7 | Introduction to Machine Learning for Biological Data | Dr. William Raymond  |  <ul>[M3D-Regression ➡️](./Module3-Statistics/M3D_Intro_to_ML_and_Basics_of_Regression.ipynb)</ul> <ul>[M3E-Basic Classification ➡️](./Module3-Statistics/M3E_Basics_of_Classification.ipynb)</ul>    | [HW5 ➡️](https://classroom.github.com/a/4UURF--W)
+| Description  | Notebook(s)  | 
+| -------- | -------- |
+ | Sampling from Distributions, Expected Values and Summary Statistics | [Module 3A ➡️](./Module3-Statistics/M3A_Distributions_Sampling_Expectations_and_SummaryStatistics.ipynb) |
+ | Computing Likelihood Functions and Estimating Models from Data| [Module 3B ➡️]([./Module3-Statistics/M3B_LikelihoodFunctions_Estimation.ipynb) |
+ | Performing Hypothesis Testing to Determine Significance and P-values | [Module 3C ➡️](./Module3-Statistics/M3C_HypothesisTesting_Significance_Pvalues.ipynb) |
+ | Introduction to Machine Learning and Regression Analyses| [Module 3D ➡️](./Module3-Statistics/M3D_Intro_to_ML_and_Basics_of_Regression.ipynb) |
+ | Using Machine Learning for Classification Analysis| [Module 3E ➡️](./Module3-Statistics/M3E_Basics_of_Classification.ipynb) |
 ___
 
 
