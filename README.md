@@ -40,10 +40,10 @@ ___
 <left><h3> Module 2 :  Introduction to Basic Bioinformatics.  </h3></left>
  | Description | Notebook(s)  |
  | -------- | -------- |
- | Getting and annotatic biological sequences | [Module 2A ➡️](./Module2-Bioinformatics/M2A_Getting_and_Annotating_Genomic_Sequences.ipynb) |
- | Aligning sequences | [Module 2B ➡️](./Module2-Bioinformatics/M2B_Aligning_Sequences.ipynb) |
- | Searching for related sequences | [Module 2C ➡️]([./Module2-Bioinformatics/M2C_Finding_Related_Sequences.ipynb) |
- | Cojstructing Phylogenetic Histories | [Module 2D ➡️](./Module2-Bioinformatics/M2D_Constructing_Phylogenetic_Histories.ipynb) |
+ | Finding, Downloading, and Annotating Biological Sequences in Python | [Module 2A ➡️](./Module2-Bioinformatics/M2A_Getting_and_Annotating_Genomic_Sequences.ipynb) |
+ | Aligning Pairs and Sets of Biological Sequences in Python | [Module 2B ➡️](./Module2-Bioinformatics/M2B_Aligning_Sequences.ipynb) |
+ | Performing BLAST Searches to Discover Related Sequences | [Module 2C ➡️]([./Module2-Bioinformatics/M2C_Finding_Related_Sequences.ipynb) |
+ | Constructing Phylogenetic Trees to Represent Biological Histories | [Module 2D ➡️](./Module2-Bioinformatics/M2D_Constructing_Phylogenetic_Histories.ipynb) |
 
 ___
 
