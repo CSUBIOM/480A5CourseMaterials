@@ -79,7 +79,7 @@ ___
 | Description | Notebook(s)  |
 | --------| -------- |
 | Formulating Bayes's Theorem to Analyze Data in Python | [Module 6A ➡️](./Module6-MCMC/M6A_Bayesian_Thinking.ipynb)|  
-| Using Markov Chain Monte Carlo to Solve Complex Problems | [Module 6A ➡️](./Module6-MCMC/M6B_Markov_Chain_Monte_Carlo.ipynb)|  
+| Using Markov Chain Monte Carlo to Solve Complex Problems | [Module 6B ➡️](./Module6-MCMC/M6B_Markov_Chain_Monte_Carlo.ipynb)|  
 ___
 
 ## Python Setup 
